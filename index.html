@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .btn{
+            width: 100px;
+            height: 50px;
+            border: none;
+            cursor: pointer;
+            color: #000;
+            background: lightgreen;
+            font-family: 'Cambria',sans-serif;
+            border-radius: 10px;
+        }
+
+        .btn:hover{
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(51, 51, 51, 0.1);
+
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="btn">Yes or No</button>
+</div>
+<script>
+    let buttonRnd = document.querySelector('.btn');
+
+
+
+    buttonRnd.addEventListener('click',() =>{
+        let rnd = Math.random();
+        if (rnd > 0.5){
+            rnd = 0;
+            alert("No");
+        }
+        else{
+            rnd = 1;
+            alert("Yes");
+        }
+        
+    })
+</script>
+</body>
+</html>
